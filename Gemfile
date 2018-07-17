@@ -41,6 +41,8 @@ group :development, :test do #개발하고ㅡ 테스트만 밑에 것으로 하�
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'sqlite3'
+  gem 'rails_db'
+  gem 'hirb'
 end
 
 group :development do
