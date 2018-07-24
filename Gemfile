@@ -27,6 +27,8 @@ gem 'carrierwave'
 gem "fog-aws"
 gem 'devise'
 gem 'mini_magick'
+ gem 'sqlite3'
+ gem 'therubyracer'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -40,7 +42,6 @@ gem 'mini_magick'
 group :development, :test do #개발하고ㅡ 테스트만 밑에 것으로 하것다,
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'sqlite3'
   gem 'rails_db'
   gem 'hirb'
 end
@@ -54,6 +55,6 @@ group :development do
 end
 
 group :production do #서버 올리는 건 이걸로 하자.
-  gem'pg', '~> 0.21.0'
-  gem 'rails_12factor'
+  #gem'pg', '~> 0.21.0'
+  #gem 'rails_12factor'
 end

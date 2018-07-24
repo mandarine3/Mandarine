@@ -4,6 +4,18 @@ class PostController < ApplicationController
   def index
     @post = Post.all.reverse #리버스는 컨트롤러에서 하자
   end
+  
+  def ajaxCall
+    count =params[:count].to_i
+    @item=Post.all.at(count)
+    @return_Value ={
+    "id" => @item.id, 
+    "user"=> @item.user_id, 
+    "title" =>@item.title, 
+    "time" => @item.created.at}
+    
+    render json: @return_Value
+  end
 
   def new
   end
